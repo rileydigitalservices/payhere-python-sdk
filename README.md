@@ -12,7 +12,7 @@
 [![Build Status](https://travis-ci.com/rileydigitalservices/payhere-python-sdk.svg?branch=master)](https://travis-ci.com/rileydigitalservices/payhere-python-sdk)
 [![Latest Version](https://img.shields.io/pypi/v/tox-travis.svg)](https://badge.fury.io/js/payhere-python-sdk)
 [![Coverage Status](https://coveralls.io/repos/github/rileydigitalservices/payhere-python-sdk/badge.svg?branch=master)](https://coveralls.io/github/rileydigitalservices/payhere-python-sdk?branch=master)
-[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/momo-api-developers/)
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/payhere-api-developers/)
 
 
 # Usage

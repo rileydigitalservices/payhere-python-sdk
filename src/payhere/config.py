@@ -38,9 +38,9 @@ class PayhereConfig(object):
     @property
     def baseUrl(self):
         if self.environment == "sandbox":
-            "http://sandbox.payhere.africa/" + self.version
+            "https://api-sandbox.payhere.africa/" + self.version
         return self.get_property(
-            'PAYHERE_BASE_URL') or "http://sandbox.payhere.africa/" + self.version
+            'PAYHERE_BASE_URL') or "https://api-sandbox.payhere.africa/" + self.version
 
     @property
     def app_id(self):
