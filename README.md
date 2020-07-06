@@ -29,7 +29,7 @@ This library supports Python 3.4+ (PyPy supported)
 
 # Account details
 
-## Getting environment API user 
+## Getting environment API user
 
 Next, we need to get the `APP-ID`, `username` and `password` for use in the product. You can get these details from `https://dashboard.payhere.africa/register`.
 
@@ -39,7 +39,6 @@ The redentials in the sandbox environment can be used straight away. In producti
 
 Before we can fully utilize the library, we need to specify global configurations. The global configuration must contain the following:
 
-* `PAYHERE_BASE_URL`: An optional base url to Payhere API. By default the staging base url will be used
 * `PAYHERE_ENVIRONMENT`: Optional enviroment, either "sandbox" or "production". Default is 'sandbox'
 * `PAYHERE_APP_ID`: The unique application identity for your app
 * `PAYHERE_USERNAME`: Username used for authentication
@@ -49,10 +48,9 @@ The full list of configuration options can be seen in the example below:
 
  ```python
  config = {
-    "PAYHERE_ENVIRONMENT": os.environ.get("PAYHERE_ENVIRONMENT"), 
-    "PAYHERE_BASE_URL": os.environ.get("PAYHERE_BASE_URL"), 
+    "PAYHERE_ENVIRONMENT": os.environ.get("PAYHERE_ENVIRONMENT"),
     "PAYHERE_APP_ID": os.environ.get("PAYHERE_APP_ID"),
-    "PAYHERE_USERNAME": os.environ.get("PAYHERE_USERNAME"), 
+    "PAYHERE_USERNAME": os.environ.get("PAYHERE_USERNAME"),
     "PAYHERE_PASSWORD": os.environ.get("PAYHERE_PASSWORD"),
 }
 ```
@@ -73,7 +71,7 @@ client = Inpayments()
 
 1. `requestToPay`: This operation is used to request a payment from a consumer (Payer). The payer will be asked to authorize the payment. The transaction is executed once the payer has authorized the payment. The transaction will be in status PENDING until it is authorized or declined by the payer or it is timed out by the system. Status of the transaction can be validated by using `getTransactionStatus`.
 
-2. `getTransaction`: Retrieve transaction information using the `transactionId` returned by `requestToPay`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error. 
+2. `getTransaction`: Retrieve transaction information using the `transactionId` returned by `requestToPay`. You can invoke it at intervals until the transaction fails or succeeds. If the transaction has failed, it will throw an appropriate error.
 
 ### Sample Code
 
@@ -118,4 +116,10 @@ client.transfer(amount="600", mobile="256772123456", processing_number="12345678
 
 ```
 
+### Developer
+We use `tox` to automate our tests. You can run the test using
+
+```python
+tox
+```
 Thank you.
