@@ -60,7 +60,7 @@ setup(
         'Topic :: Utilities',
     ],
     keywords=[
-        'MoMo API', 'MoMo API Python Wrapper','MoMo API Python', 'Payhere API'
+        'Payhere API', 'Payhere API Python Wrapper','Payhere API Python', 'Payhere API'
     ],
     install_requires=[
         'requests == 2.21.0',
